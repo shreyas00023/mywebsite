@@ -53,5 +53,6 @@ social:
 
 # Build settings
 markdown: kramdown
+permalink: pretty
 #sass:
 #  style: compressed
