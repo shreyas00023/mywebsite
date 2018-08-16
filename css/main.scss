@@ -143,7 +143,9 @@ $baseurl: '{{ site.baseurl }}/images';
 		font-size: 0.7em;
 		line-height: 1.5em;
 	}
-
+	.black{
+		color: #000000
+	}
 	sub {
 		font-size: 0.8em;
 		position: relative;
