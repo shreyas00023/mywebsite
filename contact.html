@@ -41,20 +41,21 @@
     <div class="inner">
 			<section>
 				<h4 class="black">Form</h4>
-				<form method="post" action="contact.php">
+				<form name="gform" id="gform" method="post" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLScOeayA4yeExAnQzi0K_u9a7l3zMXHRX5h_6YAc88mQim0-7g/formResponse?"
+				      target="hidden_iframe" onsubmit="submitted=true;">
 					<div class="row uniform">
 						<div class="6u 12u$(xsmall)">
-							<input type="text" name="name" id="demo-name" value="" class="black" placeholder="Name">
+							<input type="text" name="entry.1720746489" id="entry.1720746489" value=""  placeholder="Name">
 						</div>
 						<div class="6u$ 12u$(xsmall)">
-							<input type="email" name="email" id="demo-email" value="" class="black" placeholder="Email">
+							<input type="email" name="entry.2003230832" id="entry.2003230832" value=""  placeholder="Email">
 						</div>
 						<!--<div class="6u 12u$(small)">
 							<input type="checkbox" id="demo-copy" name="demo-copy">
 							<label for="demo-copy">Email me a copy</label>
 						</div>-->
 						<div class="12u$">
-							<textarea name="message" id="demo-message" class="black" placeholder="Enter your message" rows="6"></textarea>
+							<textarea name="entry.1137404616" id="entry.1137404616" placeholder="Enter your message" rows="6"></textarea>
 						</div>
 						<div class="12u$">
 							<ul class="actions">
@@ -64,6 +65,7 @@
 						</div>
 					</div>
 				</form>
+				<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 			</section>
     </div>
   </section>
@@ -128,6 +130,13 @@
 <script src="/js/util.js"></script>
 <!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
 <script src="/js/main.js"></script>
+<script type="text/javascript">var submitted=false;</script>
+<script type="text/javascript">
+$('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed...');
+  });
+</script>	    
 
 
     </div>
